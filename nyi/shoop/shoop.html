@@ -21,7 +21,7 @@
       </nav>
     </div>
   </header>
-  <li><a href="../index.html" class="btn btn-primary"> < </a></li>
+  <a href="../index.html" class="btn btn-primary_1"> < </a>
   <main>
     <section class="hero">
       <div class="hero-content">
@@ -46,7 +46,7 @@
           <img src="../img/map.jpg" alt="Метро 2033 - Карта">
           <h3>Метро 2033 - Карта</h3>
           <p>Погрузись в мрачную и атмосферную музыку из игры.</p>
-          <a href="#" class="btn btn-primary" onclick="showPaymentModal('Метро 2033 - Саундтрек')">Купить</a>
+          <a href="#" class="btn btn-primary" onclick="showPaymentModal('Метро 2033 - Карта')">Купить</a>
         </div>
         <div class="product-card">
           <img src="../img/book.jpg" alt="Метро 2033 - Книга">
@@ -96,7 +96,7 @@
       const productNameElement = document.getElementById("product-name");
       const closeButton = document.getElementsByClassName("close-button")[0];
 
-      // Генерируем случайный результат оплаты (успешно/неуспешно)
+      
       const isPaymentSuccessful = Math.random() < 0.5;
 
       productNameElement.textContent = productName;
