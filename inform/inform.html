@@ -7,46 +7,65 @@
     <link rel="stylesheet" href="inform.css">
 </head>
 <body>
-
-<div class="about">
-    <h1>О нас</h1>
-    <p>Мы — команда профессионалов, стремящихся предоставить лучшие решения для наших клиентов. Наша цель — сделать ваш опыт с нами максимально комфортным и продуктивным.</p>
-    <p>Мы верим в инновации, качество и надежность. Мы постоянно развиваемся и адаптируемся к изменениям на рынке, чтобы предлагать вам самые современные продукты и услуги.</p>
-    <p>Присоединяйтесь к нам в нашем путешествии к успеху!</p>
-</div>
-
+    <header>
+        <div class="header-content">
+          <div class="logo">
+            <a href="../index.html">Метро 2033</a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="" class="active">Магазин</a></li>
+              <li><a href="../book/book.html">Книги</a></li>
+              <li><a href="../game/game.html">Игры</a></li>
+              <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="about-section">
+        <div class="about-background">
+          <img src="../img/metro.jpeg" alt="О нас">
+        </div>
+        <div class="about-content">
+          <h1>О нас</h1>
+          <p>Мы — команда профессионалов, стремящихся предоставить лучшие решения для наших клиентов. Наша цель — сделать ваш опыт с нами максимально комфортным и продуктивным.</p>
+          <p>Мы верим в инновации, качество и надежность. Мы постоянно развиваемся и адаптируемся к изменениям на рынке, чтобы предлагать вам самые современные продукты и услуги.</p>
+          <p>Присоединяйтесь к нам в нашем путешествии к успеху!</p>
+        </div>
+      </div>
 <div class="slider">
     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
     <div class="slide" style="display: block;">
-        <img src="./images/Слайдер/1.png" alt="1 вариант">
+        <img src="../img/1_1.jpeg" alt="1 вариант">
         <div class="caption">1 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/2.png" alt="2 вариант">
+        <img src="../img/1_2.jpeg" alt="2 вариант">
         <div class="caption">2 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/3.png" alt="3 вариант">
+        <img src="../img/1_3.jpeg" alt="3 вариант">
         <div class="caption">3 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/4.png" alt="4 вариант">
+        <img src="../img/1_4.jpeg" alt="4 вариант">
         <div class="caption">4 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/5.png" alt="5 вариант">
+        <img src="../img/1_5.jpeg" alt="5 вариант">
         <div class="caption">5 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/6.png" alt="6 вариант">
+        <img src="../img/1_6.jpeg" alt="6 вариант">
         <div class="caption">6 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/7.png" alt="7 вариант">
+        <img src="../img/1_7.jpeg" alt="7 вариант">
         <div class="caption">7 вариант</div>
     </div>
     <div class="slide">
-        <img src="./images/Слайдер/8.png" alt="8 вариант">
+        <img src="../img/1_8.jpeg" alt="8 вариант">
         <div class="caption">8 вариант</div>
     </div>
     <button class="next" onclick="changeSlide(1)">&#10095;</button>
@@ -73,6 +92,11 @@
         changeSlide(1);
     }, 5000); // 5 секунд
 </script>
-
+<h1 class="titll">Спасибо за внимание!</h1>
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Метро 2033. Все права защищены.</p>
+    </div>
+  </footer>
 </body>
 </html>
