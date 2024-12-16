@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-content_button {
+    margin: auto 24px auto auto;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+  }
+  
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.button_menu {
+    position: fixed; /* Фиксируем кнопку слева */
+    top: 60px; /* Отступ сверху */
+    left: 60px; /* Отступ слева */
+    background-color: #34373a81; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор в виде указателя */
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.button_menu a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+}
+
+.button_menu:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
+
+.books {
+    margin-bottom: 20px;
+    width: 100%; /* Задаем ширину для списка книг */
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    background: #393030;
+    padding: 10px;
+    color: wheat;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-image {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.book-description {
+    flex-grow: 1;
+}
+
+.read-more {
+    background-color: #ff0051;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+.additional-info {
+    margin-top: 10px;
+    color: rgba(178, 148, 91, 0.866);
+    display: none; /* Скрываем дополнительную информацию по умолчанию */
+}
+
+.memo-game {
+    margin-top: 20px;
+    text-align: center; /* Центрируем текст в разделе игры */
+    color: wheat;
+}
+
+#memo-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin-top: 10px;
+    color: white;
+    justify-content: center; /* Центрируем карточки в игровом поле */
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #0f0a0a; /* Изменяем цвет фона на серый */
+    border: 1px solid #aaa; /* Цвет рамки */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    display: none; /* Скрываем изображения по умолчанию */
+}
+
+.card.flipped img {
+    display: block; /* Показываем изображение при перевороте карточки */
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
