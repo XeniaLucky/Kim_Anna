@@ -8,6 +8,11 @@
 </head>
 <body>
     <header>
+      <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="../img/metro.mp4" type="video/mp4">
+        </video>
+    </div>
         <div class="header-content">
           <div class="logo">
             <a href="../index.html">Метро 2033</a>
@@ -24,9 +29,6 @@
         </div>
       </header>
       <div class="about-section">
-        <div class="about-background">
-          <img src="../img/metro.jpeg" alt="О нас">
-        </div>
         <div class="about-content">
           <h1>О нас</h1>
           <p>Мы — команда профессионалов, стремящихся предоставить лучшие решения для наших клиентов. Наша цель — сделать ваш опыт с нами максимально комфортным и продуктивным.</p>
@@ -38,27 +40,21 @@
     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
     <div class="slide" style="display: block;">
         <img src="../img/1_1.jpeg" alt="1 вариант">
-        <div class="caption">1 вариант</div>
     </div>
     <div class="slide">
         <img src="../img/1_2.jpeg" alt="2 вариант">
-        <div class="caption">2 вариант</div>
     </div>
     <div class="slide">
         <img src="../img/1_3.jpeg" alt="3 вариант">
-        <div class="caption">3 вариант</div>
     </div>
     <div class="slide">
         <img src="../img/1_4.jpeg" alt="4 вариант">
-        <div class="caption">4 вариант</div>
     </div>
     <div class="slide">
         <img src="../img/1_5.jpeg" alt="5 вариант">
-        <div class="caption">5 вариант</div>
     </div>
     <div class="slide">
         <img src="../img/1_6.jpeg" alt="6 вариант">
-        <div class="caption">6 вариант</div>
     </div>
     <div class="slide">
         <img src="../img/1_7.jpeg" alt="7 вариант">
@@ -92,7 +88,6 @@
         changeSlide(1);
     }, 5000); // 5 секунд
 </script>
-<h1 class="titll">Спасибо за внимание!</h1>
 <footer>
     <div class="footer-content">
       <p>&copy; 2024 Метро 2033. Все права защищены.</p>
