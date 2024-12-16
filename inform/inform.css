@@ -2,8 +2,128 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
+    display: flex;
+    background-color: #000000a0;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-content_button {
+    margin: auto 24px auto auto;
+  }
+  
+  .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+  }
+  
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .video-bg video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .about-section {
+    position: relative;
+    padding: 40px;
+    background-color: #000000a0;
+  }
+
+  .about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .about-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+  }
+
+  .about-content h1 {
+    margin-bottom: 20px;
+  }
+
+  .about-content p {
+    margin: 0 0 20px;
+    font-size: 18px;
+  }
+
+  .about-background {
+    flex: 1;
+    text-align: right;
+  }
+
+  .about-background img {
+    max-width: 100%;
+    height: auto;
+  }
 
 .about {
     padding: 20px;
@@ -20,20 +140,26 @@ body {
 }
 
 .slider {
-    position: relative;
-    max-width: 600px;
-    margin: 20px auto;
-    overflow: hidden;
+  position: relative;
+  width: 80%; 
+  max-width: 80%;
+  height: auto; 
+  margin: auto; 
+  overflow: hidden;
+  border: solid 2px black;
+  border-radius: 5px;
 }
 
 .slide {
-    display: none;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .slide img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto; 
+  display: block;
 }
 
 .caption {
@@ -59,4 +185,21 @@ body {
 
 .next {
     right: 10px;
+}
+.titll{
+    font-size: 50px;
+    color: brown;
+    text-align: center;
+}
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
