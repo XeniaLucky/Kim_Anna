@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры Metro</title>
+    <link rel="stylesheet" href="game.css">
+    <style>
+        .game-popup {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            display: none; 
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .game:hover .game-popup {
+            display: block;
+        }
+        .button_menu{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="../index.html">Метро 2033</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../shop/shop.html">Магазин</a></li>
+          <li><a href="../book/book.html">Книги</a></li>
+          <li><a href="../game/game.html" class="active">Игры</a></li>
+          <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+    <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="../img/metro.mp4" type="video/mp4">
+        </video>
+    </div>
+    <main>
+        <button class="button_menu">
+            <a href="../index.html"> < </a>
+        </button>
+        <h1>Серия игр Metro</h1>
+
+        <div class="game">
+            <img src="img/metro2033_cover.png" alt="Metro 2033">
+            <div class="game-description">
+                <h2>Metro 2033 (2010)</h2>
+                <p>Первая игра серии, созданная по мотивам романа Дмитрия Глуховского «Метро 2033».</p>
+            </div>
+            <div class="game-popup">
+                <h3>Связь с книгой:</h3>
+                <p>Первая игра, «Metro 2033», была создана по роману «Метро 2033» Дмитрия Глуховского, однако имело ряд расхождений с сюжетом первоисточника. Имеется две концовки: хорошая и плохая. Каноничной считается плохая, где погибают Чёрный (существо).</p>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="img/metrolastlight_cover.png" alt="Metro: Last Light">
+            <div class="game-description">
+                <h2>Metro: Last Light (2013)</h2>
+                <p>Продолжение, сюжет которого разворачивается после финала книги.</p>
+            </div>
+            <div class="game-popup">
+                <h3>Связь с книгой:</h3>
+                <p>Игра «Metro: Last Light» создана по оригинальному сценарию Дмитрия Глуховского и хронологически расположена между событиями «Метро 2033» и «Метро 2034».  Имеются связи с рассказом «Евангелие от Артёма» и романом «Метро 2034», но с рядом временных и сюжетных несоответствий.  Расхождения объясняются различными трактовками одной и той же истории, дополняющими друг друга.</p>
+            </div>
+        </div>
+
+    <div class="game">
+            <img src="img/metroredux_cover.png" alt="Metro Redux">
+            <div class="game-description">
+                <h2>Metro Redux (2014)</h2>
+                <p>Ремастер первой и второй частей серии.</p>
+            </div>
+            <div class="game-popup">
+                <h3>Связь с книгой:</h3>
+                <p>Metro Redux - это ремастер, не вносящий изменений в сюжетную связь с книгами,  основанный на играх Metro 2033 и Metro: Last Light.ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤ</p>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="img/metroexodus_cover.png" alt="Metro Exodus">
+            <div class="game-description">
+                <h2>Metro Exodus (2019)</h2>
+                <p>Самая большая и амбициозная игра серии, действие которой разворачивается за пределами Московского метрополитена.</p>
+            </div>
+            <div class="game-popup">
+                <h3>Связь с книгой:</h3>
+                <p>«Metro Exodus» переосмысливает и продолжает сюжет романа «Метро 2035», идейно, а не хронологически.  В ней присутствуют персонажи из книг «Вселенной».  Сюжет является прямым продолжением заключительной книги трилогии. К событиям игр отсылают рассказы «Фальшивая жизнь индивида», «Площадь Революции» и «Сказочник», а в роман «Тёмная мишень» специально был включён эпизод затопления южной Третьяковской, который предварял появление «Венеции» в игре Metro: Last Light.</p>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="img/metroawakening_cover.png" alt="Metro Awakening">
+            <div class="game-description">
+                <h2>Metro Awakening (2024)</h2>
+                <p>Игра для виртуальной реальности, разработанная Vertigo Games.</p>
+            </div>
+            <div class="game-popup">
+                <h3>Связь с книгой:</h3>
+                <p>(Информация о связи с книгами отсутствует на данный момент.)ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤ ㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤ</p>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

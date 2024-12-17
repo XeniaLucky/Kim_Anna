@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игры</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+        .game {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .game img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .game-description {
+            flex: 1;
+        }
+        .game-popup {
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 10;
+            display: none;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+        .game:hover .game-popup {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Серия игр Metro</h1>
+
+    <div class="game">
+        <img src="metro2033_cover.jpg" alt="Metro 2033">
+        <div class="game-description">
+            <h2>Metro 2033 (2010)</h2>
+            <p>Первая игра серии, созданная по мотивам романа Дмитрия Глуховского «Метро 2033».</p>
+        </div>
+        <div class="game-popup">
+            <h3>Связь с книгой:</h3>
+            <p>Первая игра, «Metro 2033», была создана по роману «Метро 2033» Дмитрия Глуховского, однако имело ряд расхождений с сюжетом первоисточника. Имеется две концовки: хорошая и плохая. Каноничной считается плохая, где погибают Чёрный (существо).</p>
+        </div>
+    </div>
+
+    <div class="game">
+        <img src="metrolastlight_cover.jpg" alt="Metro: Last Light">
+        <div class="game-description">
+            <h2>Metro: Last Light (2013)</h2>
+            <p>Продолжение, сюжет которого разворачивается после финала книги.</p>
+        </div>
+        <div class="game-popup">
+            <h3>Связь с книгой:</h3>
+            <p>Игра «Metro: Last Light» создана по оригинальному сценарию Дмитрия Глуховского и хронологически расположена между событиями «Метро 2033» и «Метро 2034».  Имеются связи с рассказом «Евангелие от Артёма» и романом «Метро 2034», но с рядом временных и сюжетных несоответствий.  Расхождения объясняются различными трактовками одной и той же истории, дополняющими друг друга.</p>
+        </div>
+    </div>
+
+    <div class="game">
+        <img src="metroredux_cover.jpg" alt="Metro Redux">
+        <div class="game-description">
+            <h2>Metro Redux (2014)</h2>
+            <p>Ремастер первой и второй частей серии.</p>
+        </div>
+        <div class="game-popup">
+            <h3>Связь с книгой:</h3>
+            <p>Metro Redux - это ремастер, не вносящий изменений в сюжетную связь с книгами,  основанный на играх Metro 2033 и Metro: Last Light.</p>
+        </div>
+    </div>
+
+    <div class="game">
+        <img src="metroexodus_cover.jpg" alt="Metro Exodus">
+        <div class="game-description">
+            <h2>Metro Exodus (2019)</h2>
+            <p>Самая большая и амбициозная игра серии.</p>
+        </div>
+        <div class="game-popup">
+            <h3>Связь с книгой:</h3>
+            <p>«Metro Exodus» переосмысливает и продолжает сюжет романа «Метро 2035», идейно, а не хронологически.  В ней присутствуют персонажи из книг «Вселенной».  Сюжет является прямым продолжением заключительной книги трилогии. К событиям игр отсылают рассказы «Фальшивая жизнь индивида», «Площадь Революции» и «Сказочник», а в роман «Тёмная мишень» специально был включён эпизод затопления южной Третьяковской, который предварял появление «Венеции» в игре Metro: Last Light.</p>
+        </div>
+    </div>
+
+    <div class="game">
+        <img src="metroawakening_cover.jpg" alt="Metro Awakening">
+        <div class="game-description">
+            <h2>Metro Awakening (2024)</h2>
+            <p>Игра для виртуальной реальности.</p>
+        </div>
+        <div class="game-popup">
+            <h3>Связь с книгой:</h3>
+            <p>(Информация о связи с книгами отсутствует на данный момент.)</p>
+        </div>
+    </div>
+
+</body>
+</html>
