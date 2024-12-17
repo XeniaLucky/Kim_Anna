@@ -166,6 +166,19 @@ footer {
     color: #f0f0f0;
 }
 
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .books, .book-item, .book-image, .book-description, .read-more, .additional-info, .memo-game, #memo-board, .card {
     display: none;
 }
