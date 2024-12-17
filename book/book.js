@@ -4,16 +4,17 @@ let cardIds = [];
 let matchedCards = [];
 let lives = 3;
 let totalPairs = 0;
+let gameStarted = false;
 
 const texts = [
-    'Текст 1', // Тексты для карточек
-    'Текст 2',
-    'Текст 3',
-    'Текст 4',
-    'Текст 5',
-    'Текст 6',
-    'Текст 7',
-    'Текст 8'
+    '☃',
+    '🍦',
+    '❄',
+    '🥶',
+    '🎿',
+    '🌨',
+    '🛷',
+    '😰'
 ];
 
 document.getElementById('start-game').addEventListener('click', createBoard);
@@ -27,6 +28,7 @@ function createBoard() {
     lives = 3;
     document.getElementById('lives').textContent = `Жизни: ${lives}`;
     document.getElementById('message').textContent = '';
+    gameStarted = true;
 
     const difficulty = document.getElementById('difficulty').value;
     setDifficulty(difficulty);
@@ -38,7 +40,7 @@ function createBoard() {
         const card = document.createElement('div');
         card.setAttribute('data-id', i);
         card.classList.add('card');
-        card.innerHTML = `<span class="card-text"></span>`; // Скрываем текст
+        card.innerHTML = `<span class="card-text"></span>`;
         card.addEventListener('click', flipCard);
         board.appendChild(card);
     }
@@ -46,22 +48,23 @@ function createBoard() {
 
 function setDifficulty(difficulty) {
     if (difficulty === 'easy') {
-        cards = texts.slice(0, 4).concat(texts.slice(0, 4)); // 4 пары
+        cards = texts.slice(0, 4).concat(texts.slice(0, 4));
     } else if (difficulty === 'medium') {
-        cards = texts.slice(0, 6).concat(texts.slice(0, 6)); // 6 пар
+        cards = texts.slice(0, 6).concat(texts.slice(0, 6));
     } else if (difficulty === 'hard') {
-        cards = texts.slice(0, 8).concat(texts.slice(0, 8)); // 8 пар
+        cards = texts.slice(0, 8).concat(texts.slice(0, 8));
     }
 }
 
 function flipCard() {
+    if (!gameStarted || lives === 0) return;
+
     const selected = this;
     const cardId = selected.getAttribute('data-id');
 
-    // Проверяем, если карточка уже перевернута или совпала
     if (cardIds.length < 2 && !matchedCards.includes(cardId) && !selected.classList.contains('flipped')) {
         selected.classList.add('flipped');
-        selected.querySelector('.card-text').textContent = cards[cardId]; // Показываем текст
+        selected.querySelector('.card-text').textContent = cards[cardId];
         cardValues.push(cards[cardId]);
         cardIds.push(cardId);
 
@@ -80,7 +83,6 @@ function checkMatch() {
         cardValues = [];
         cardIds = [];
 
-        // Скрываем карточки
         cardsElements[firstId].style.visibility = 'hidden';
         cardsElements[secondId].style.visibility = 'hidden';
 
@@ -92,24 +94,16 @@ function checkMatch() {
         document.getElementById('lives').textContent = `Жизни: ${lives}`;
         if (lives === 0) {
             document.getElementById('message').textContent = 'Игра окончена. Попробуйте снова!';
-            resetGame();
+            gameStarted = false;
         } else {
             setTimeout(() => {
                 cardsElements[firstId].classList.remove('flipped');
                 cardsElements[secondId].classList.remove('flipped');
-                cardsElements[firstId].querySelector('.card-text').textContent = ''; // Скрываем текст
-                cardsElements[secondId].querySelector('.card-text').textContent = ''; // Скрываем текст
+                cardsElements[firstId].querySelector('.card-text').textContent = '';
+                cardsElements[secondId].querySelector('.card-text').textContent = '';
                 cardValues = [];
                 cardIds = [];
             }, 1000);
         }
     }
-}
-
-function resetGame() {
-    cardValues = [];
-    cardIds = [];
-    matchedCards = [];
-    lives = 3;
-    document.getElementById('lives').textContent = `Жизни: ${lives}`;
 }
