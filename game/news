@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости Metro: Awakening</title>
+    <link rel="stylesheet" href="game.css">
+    <style>
+        /* Styles specific to news.html */
+        .news-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        .news-item h3 {
+            margin-top: 0;
+            color: #f0f0f0;
+        }
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        main {
+            padding-top: 100px; /* Add padding to account for header height */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+          <div class="logo">
+            <a href="../index.html">Метро 2033</a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="../shop/shop.html">Магазин</a></li>
+              <li><a href="../book/book.html">Книги</a></li>
+              <li><a href="../game/game.html">Игры</a></li>
+              <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div id="header-container"></div> <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="../img/metro.mp4" type="video/mp4">
+        </video>
+    </div>
+    <main>
+        <h1>Новости Metro: Awakening</h1>
+        <div class="news-item">
+            <h3>6 ноября</h3>
+            <p>Metro: Awakening получила оценки от критиков: средняя оценка игры на Metacritic - 76 баллов, на Opencritic - 79 баллов</p>
+        </div>
+
+        <div class="news-item">
+            <h3>5 ноября</h3>
+            <p>Состоялся ранний релиз VR-шутера Metro: Awakening</p>
+        </div>
+
+        <div class="news-item">
+            <h3>3 октября</h3>
+            <p>6-минутный геймплей Metro Awakening демонстрирует стелс, перестрелки и механику выживания</p>
+        </div>
+
+        <div class="news-item">
+            <h3>25 сентября</h3>
+            <p>VR-шутер Metro Awakening выйдет в начале ноября</p>
+        </div>
+    </main>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('header-container').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
