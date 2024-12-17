@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Метро 2033 - Магазин</title>
+  <link rel="stylesheet" href="shoop.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="../index.html">Метро 2033</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../shoop/shoop.html" class="active">Магазин</a></li>
+          <li><a href="../book/book.html">Книги</a></li>
+          <li><a href="../game/game.html">Игры</a></li>
+          <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <a href="../index.html" class="btn btn-primary_1"> < </a>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Погрузись в мир Метро 2033</h1>
+        <p>Приобрети официальные кассеты, диски и игру, чтобы полностью окунуться в атмосферу постапокалиптического метрополитена.</p>
+        <div class="cta-buttons">
+          <a href="#products" class="btn btn-primary">Смотреть товары</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <h2>Наши товары</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="../img/game2.webp" alt="Метро 2033 - Игра">
+          <h3>Метро 2033 - Игра</h3>
+          <p>Окунись в атмосферу постапокалиптического метрополитена и борись за выживание.</p>
+          <a href="#" class="btn btn-primary" onclick="showPaymentModal('Метро 2033 - Игра')">Купить</a>
+        </div>
+        <div class="product-card">
+          <img src="../img/map.jpg" alt="Метро 2033 - Карта">
+          <h3>Метро 2033 - Карта</h3>
+          <p>Погрузись в мрачную и атмосферную музыку из игры.</p>
+          <a href="#" class="btn btn-primary" onclick="showPaymentModal('Метро 2033 - Карта')">Купить</a>
+        </div>
+        <div class="product-card">
+          <img src="../img/book.jpg" alt="Метро 2033 - Книга">
+          <h3>Метро 2033 - Книга</h3>
+          <p>Читай оригинальный роман, по которому была создана игра.</p>
+          <a href="#" class="btn btn-primary" onclick="showPaymentModal('Метро 2033 - Книга')">Купить</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="payment-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Оформление заказа</h2>
+        <p id="product-name"></p>
+        <p>Оплата прошла успешно!</p>
+      </div>
+    </div>
+
+    <div class="video-bg">
+      <video autoplay loop muted>
+        <source src="../img/metro.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <section class="interactiv_1">
+      <h2>Игра Выживание в метро - Метро 2033</h2>
+      <div class="interactiv">
+        <h1>Игра Выживание в метро</h1>
+        <p id="story">Вы находитесь в метро. Вдруг вы слышите шум. Что вы будете делать?</p>
+        <div id="options">
+          <button onclick="chooseOption(1)">Проверить, что происходит</button>
+          <button onclick="chooseOption(2)">Скрыться и ждать</button>
+        </div>
+        <div id="message"></div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Метро 2033. Все права защищены.</p>
+      </div>
+    </footer>
+    
+    <script>
+      function chooseOption(option) {
+        const story = document.getElementById('story');
+        const options = document.getElementById('options');
+        const message = document.getElementById('message');
+    
+        options.innerHTML = '';
+    
+        if (option === 1) {
+          story.innerText = 'Вы выходите из укрытия и видите группу мутантов. Что делать?';
+          options.innerHTML = `
+            <button onclick="chooseOption(3)">Попробовать сбежать</button>
+            <button onclick="chooseOption(4)">Сразиться с мутантами</button>
+          `;
+        } else if (option === 2) {
+          story.innerText = 'Вы прячетесь за стеной. Шум утих. Что делать дальше?';
+          options.innerHTML = `
+            <button onclick="chooseOption(5)">Выйти на поверхность</button>
+            <button onclick="chooseOption(6)">Остаться и ждать</button>
+          `;
+        } else if (option === 3) {
+          story.innerText = 'Вы успешно сбежали, но потеряли часть снаряжения. Вы в безопасности.';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        } else if (option === 4) {
+          story.innerText = 'Вы сражаетесь, но, к сожалению, вы не справились. Игра окончена.';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        } else if (option === 5) {
+          story.innerText = 'На поверхности вы видите разрушенный город. Вы нашли новый путь!';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        } else if (option === 6) {
+          story.innerText = 'Вы остаетесь в укрытии, но вскоре вас находят мутанты. Игра окончена.';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        }
+      }
+    
+      function restartGame() {
+        document.getElementById('story').innerText = 'Вы находитесь в метро. Вдруг вы слышите шум. Что вы будете делать?';
+        document.getElementById('options').innerHTML = `
+          <button onclick="chooseOption(1)">Проверить, что происходит</button>
+          <button onclick="chooseOption(2)">Скрыться и ждать</button>
+        `;
+        document.getElementById('message').innerHTML = '';
+      }
+    </script>
+</body>
+</html>

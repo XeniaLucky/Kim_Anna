@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книги</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    
+<header>
+    <div class="header-content">
+      <div class="logo">
+        <a href="../index.html">Метро 2033</a>
+      </div>
+      <nav>
+        <ul>
+            <li><a href="../shoop/shoop.html" >Магазин</a></li>
+          <li><a href="../book/book.html"class="active">Книги</a></li>
+          <li><a href="../game/game.html">Игры</a></li>
+          <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="../img/metro.mp4" type="video/mp4">
+        </video>
+    </div>
+    <main>
+        <a href="../index.html" class="button_menu"> < </a>
+        <section class="books">
+            <h2>Список книг</h2>
+            <div class="book-item">
+                <img src="img/1.webp" alt="Метро 2033" class="book-image">
+                <div class="book-description">
+                    <h3>Метро 2033</h3>
+                    <p>После глобальной ядерной войны человечество вынуждено искать убежище в московском метро, превратившемся в последний оплот цивилизации. В центре сюжета молодой парень Артём, которому предстоит отправиться в Полис с важной миссией. Его путешествие наполнено опасностями, неожиданными союзами и угрозами, поджидающими за каждым углом тёмных туннелей.</p>
+                    <button class="read-more" onclick="toggleInfo('info-2033')">Читать дальше</button>
+                    <p class="additional-info" id="info-2033" style="display: none;">Подробное описание: Метро 2033 — это захватывающий роман, погружающий читателя в мир после апокалипсиса. Главный герой, Артём, живёт на станции ВДНХ, которая сталкивается с угрозой загадочных Тёмных. Чтобы спасти свою станцию, он должен предупредить жителей Полиса — центра знаний и силы в метро. Во время своего пути Артём встречает различных персонажей, от фанатиков до учёных, исследует заброшенные туннели и станции, сталкивается с мутантами и противостоит собственным страхам.</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="img/2.webp" alt="Метро 2034" class="book-image">
+                <div class="book-description">
+                    <h3>Метро 2034</h3>
+                    <p>Во втором томе истории мир метро раскрывается с новых сторон. История разворачивается вокруг станции Севастопольская, отрезанной от снабжения. Журналист Гомер, солдат Хантер и девушка Саша объединяются, чтобы исследовать источник угрозы и восстановить связь с остальным метро.</p>
+                    <button class="read-more" onclick="toggleInfo('info-2034')">Читать дальше</button>
+                    <p class="additional-info" id="info-2034" style="display: none;">Метро 2034 представляет более глубокое исследование человеческой природы, веры и одиночества. Хантер, борющийся с внутренними демонами, Гомер, стремящийся создать эпическую летопись, и Саша, желающая найти своё место в разрушенном мире, образуют тройку героев, которые отправляются на опасное задание. Роман раскрывает больше о социальной структуре метро, разнообразных сектах и фракциях, которые борются за выживание и власть.</p>
+                </div>
+            </div>
+            <div class="book-item">
+                <img src="img/4.jpg" alt="Метро 2035" class="book-image">
+                <div class="book-description">
+                    <h3>Метро 2035</h3>
+                    <p>Финальная часть трилогии завершает путешествие Артёма, который разочарован жизнью в метро и мечтает найти другие выжившие города. Эта книга исследует новые грани выживания и надежды в постапокалиптическом мире.</p>
+                    <button class="read-more" onclick="toggleInfo('info-2035')">Читать дальше</button>
+                    <p class="additional-info" id="info-2035" style="display: none;">Метро 2035 возвращает нас к истории Артёма, который стал изгоем среди своих. Его вера в то, что жизнь за пределами метро всё ещё возможна, заставляет его снова отправиться в опасное путешествие. На своём пути он раскрывает шокирующую правду о власти, контролирующей метро, и сталкивается с трудным выбором: смириться или бороться за свободу. Финал книги оставляет читателей с мощным посланием о надежде и человечности даже в самых тёмных обстоятельствах.</p>
+                </div>
+            </div>
+        </section>
+        <section class="memo-game">
+            <h2>Игра Мемо</h2>
+            <label for="difficulty">Выберите сложность:</label>
+            <select id="difficulty">
+                <option value="easy">Легкий</option>
+                <option value="medium">Средний</option>
+                <option value="hard">Сложный</option>
+            </select>
+            <button id="start-game">Начать игру</button>
+            <div id="lives">Жизни: 3</div>
+            <div id="memo-board"></div>
+            <div id="message"></div>
+        </section>
+    </main>
+    <script src="book.js"></script>
+    <script>
+        function toggleInfo(infoId) {
+            const infoElement = document.getElementById(infoId);
+            if (infoElement.style.display === 'none') {
+                infoElement.style.display = 'block';
+            } else {
+                infoElement.style.display = 'none';
+            }
+        }
+    </script>
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2024 Метро 2033. Все права защищены...
+        </div>
+    </footer>
+</body>
+</html>

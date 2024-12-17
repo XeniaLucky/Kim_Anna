@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="inform.css">
+</head>
+<body>
+    <header>
+      <div class="video-bg">
+        <video autoplay loop muted>
+            <source src="../img/metro.mp4" type="video/mp4">
+        </video>
+    </div>
+        <div class="header-content">
+          <div class="logo">
+            <a href="../index.html">Метро 2033</a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="" class="active">Магазин</a></li>
+              <li><a href="../book/book.html">Книги</a></li>
+              <li><a href="../game/game.html">Игры</a></li>
+              <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
+              
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="about-section">
+        <div class="about-content">
+          <h1>О нас</h1>
+          <p>Мы — команда профессионалов, стремящихся предоставить лучшие решения для наших клиентов. Наша цель — сделать ваш опыт с нами максимально комфортным и продуктивным.</p>
+          <p>Мы верим в инновации, качество и надежность. Мы постоянно развиваемся и адаптируемся к изменениям на рынке, чтобы предлагать вам самые современные продукты и услуги.</p>
+          <p>Присоединяйтесь к нам в нашем путешествии к успеху!</p>
+        </div>
+      </div>
+<div class="slider">
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <div class="slide" style="display: block;">
+        <img src="../img/1_1.jpeg" alt="1 вариант">
+    </div>
+    <div class="slide">
+        <img src="../img/1_2.jpeg" alt="2 вариант">
+    </div>
+    <div class="slide">
+        <img src="../img/1_3.jpeg" alt="3 вариант">
+    </div>
+    <div class="slide">
+        <img src="../img/1_4.jpeg" alt="4 вариант">
+    </div>
+    <div class="slide">
+        <img src="../img/1_5.jpeg" alt="5 вариант">
+    </div>
+    <div class="slide">
+        <img src="../img/1_6.jpeg" alt="6 вариант">
+    </div>
+    <div class="slide">
+        <img src="../img/1_7.jpeg" alt="7 вариант">
+        <div class="caption">7 вариант</div>
+    </div>
+    <div class="slide">
+        <img src="../img/1_8.jpeg" alt="8 вариант">
+        <div class="caption">8 вариант</div>
+    </div>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'block' : 'none';
+        });
+    }
+
+    function changeSlide(direction) {
+        currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    // Автоматическая смена слайдов
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000); // 5 секунд
+</script>
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Метро 2033. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
