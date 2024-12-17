@@ -14,8 +14,9 @@
       </div>
       <nav>
         <ul>
-          <li><a href="" class="active">Магазин</a></li>
+          <li><a href="../shoop/shoop.html" class="active">Магазин</a></li>
           <li><a href="../book/book.html">Книги</a></li>
+          <li><a href="../game/game.html">Игры</a></li>
           <li><a href="../inform/inform.html" class="header-content_button">О нас</a></li>
         </ul>
       </nav>
@@ -72,91 +73,68 @@
       </video>
     </div>
 
-    <section class="interactiv">
+    <section class="interactiv_1">
       <h2>Игра Выживание в метро - Метро 2033</h2>
       <div class="interactiv">
         <h1>Игра Выживание в метро</h1>
         <p id="story">Вы находитесь в метро. Вдруг вы слышите шум. Что вы будете делать?</p>
-        <button onclick="chooseOption(1)">Проверить, что происходит</button>
-        <button onclick="chooseOption(2)">Скрыться и ждать</button>
-        <p id="message"></p>
+        <div id="options">
+          <button onclick="chooseOption(1)">Проверить, что происходит</button>
+          <button onclick="chooseOption(2)">Скрыться и ждать</button>
+        </div>
+        <div id="message"></div>
       </div>
     </section>
-  </main>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2024 Метро 2033. Все права защищены.</p>
-    </div>
-  </footer>
-
-  <script>
-    function showPaymentModal(productName) {
-      const modal = document.getElementById("payment-modal");
-      const productNameElement = document.getElementById("product-name");
-      const closeButton = document.getElementsByClassName("close-button")[0];
-
-      
-      const isPaymentSuccessful = Math.random() < 0.5;
-
-      productNameElement.textContent = productName;
-
-      if (isPaymentSuccessful) {
-        modal.style.display = "block";
-      } else {
-        modal.style.display = "block";
-        productNameElement.nextElementSibling.textContent = "Оплата не прошла, попробуйте еще раз.";
-      }
-
-      closeButton.onclick = function() {
-        modal.style.display = "none";
-      }
-
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
+    
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Метро 2033. Все права защищены.</p>
+      </div>
+    </footer>
+    
+    <script>
+      function chooseOption(option) {
+        const story = document.getElementById('story');
+        const options = document.getElementById('options');
+        const message = document.getElementById('message');
+    
+        options.innerHTML = '';
+    
+        if (option === 1) {
+          story.innerText = 'Вы выходите из укрытия и видите группу мутантов. Что делать?';
+          options.innerHTML = `
+            <button onclick="chooseOption(3)">Попробовать сбежать</button>
+            <button onclick="chooseOption(4)">Сразиться с мутантами</button>
+          `;
+        } else if (option === 2) {
+          story.innerText = 'Вы прячетесь за стеной. Шум утих. Что делать дальше?';
+          options.innerHTML = `
+            <button onclick="chooseOption(5)">Выйти на поверхность</button>
+            <button onclick="chooseOption(6)">Остаться и ждать</button>
+          `;
+        } else if (option === 3) {
+          story.innerText = 'Вы успешно сбежали, но потеряли часть снаряжения. Вы в безопасности.';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        } else if (option === 4) {
+          story.innerText = 'Вы сражаетесь, но, к сожалению, вы не справились. Игра окончена.';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        } else if (option === 5) {
+          story.innerText = 'На поверхности вы видите разрушенный город. Вы нашли новый путь!';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        } else if (option === 6) {
+          story.innerText = 'Вы остаетесь в укрытии, но вскоре вас находят мутанты. Игра окончена.';
+          message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
         }
       }
-    }
-
-    function chooseOption(option) {
-      const story = document.getElementById('story');
-      const message = document.getElementById('message');
-
-      if (option === 1) {
-        story.innerText = 'Вы выходите из укрытия и видите группу мутантов. Что делать?';
-        message.innerHTML = `
-          <button onclick="chooseOption(3)">Попробовать сбежать</button>
-          <button onclick="chooseOption(4)">Сразиться с мутантами</button>
+    
+      function restartGame() {
+        document.getElementById('story').innerText = 'Вы находитесь в метро. Вдруг вы слышите шум. Что вы будете делать?';
+        document.getElementById('options').innerHTML = `
+          <button onclick="chooseOption(1)">Проверить, что происходит</button>
+          <button onclick="chooseOption(2)">Скрыться и ждать</button>
         `;
-      } else if (option === 2) {
-        story.innerText = 'Вы прячетесь за стеной. Шум утих. Что делать дальше?';
-        message.innerHTML = `
-          <button onclick="chooseOption(5)">Выйти на поверхность</button>
-          <button onclick="chooseOption(6)">Остаться и ждать</button>
-        `;
-      } else if (option === 3) {
-        story.innerText = 'Вы успешно сбежали, но потеряли часть снаряжения. Вы в безопасности.';
-        message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
-      } else if (option === 4) {
-        story.innerText = 'Вы сражаетесь, но, к сожалению, вы не справились. Игра окончена.';
-        message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
-      } else if (option === 5) {
-        story.innerText = 'На поверхности вы видите разрушенный город. Вы нашли новый путь!';
-        message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
-      } else if (option === 6) {
-        story.innerText = 'Вы остаетесь в укрытии, но вскоре вас находят мутанты. Игра окончена.';
-        message.innerHTML = '<button onclick="restartGame()">Начать заново</button>';
+        document.getElementById('message').innerHTML = '';
       }
-    }
-
-    function restartGame() {
-      document.getElementById('story').innerText = 'Вы находитесь в метро. Вдруг вы слышите шум. Что вы будете делать?';
-      document.getElementById('message').innerHTML = `
-        <button onclick="chooseOption(1)">Проверить, что происходит</button>
-        <button onclick="chooseOption(2)">Скрыться и ждать</button>
-      `;
-    }
-  </script>
+    </script>
 </body>
 </html>
