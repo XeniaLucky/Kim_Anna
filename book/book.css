@@ -143,15 +143,17 @@ body {
 }
 
 .memo-game {
-    margin-top: 20px;
-    text-align: center; /* Центрируем текст в разделе игры */
-    color: wheat;
+  margin-top: 20px;
+  text-align: center; /* Центрируем текст в разделе игры */
+  color: wheat;
+  margin-bottom: 60px;
 }
 
 #memo-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     gap: 10px;
+    font-size: 50px;
     margin-top: 10px;
     color: rgb(221, 214, 97);
     justify-content: center; /* Центрируем карточки в игровом поле */
@@ -167,6 +169,10 @@ body {
   color: #0f0a0a;
   padding: 10px 30px 10px 30px;
   font-size: medium;
+}
+.memo-game label{
+  font-size: 30px;
+
 }
 .card {
     width: 100px;
