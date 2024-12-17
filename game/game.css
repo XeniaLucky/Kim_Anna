@@ -78,7 +78,7 @@ body {
   
 .button_menu {
     position: fixed; 
-    top: 20px; 
+    top: 50px !important; 
     left: 20px; 
     background-color: rgba(52, 55, 58, 0.81); 
     color: white; 
@@ -143,7 +143,15 @@ h1 {
     display: none;
     box-shadow: 2px 2px 5px rgba(100, 30, 22, 0.3);
     color: #fff;
-    border-radius: 5px; 
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(10px); 
+}
+
+.game:hover .game-popup {
+    display: block;
 }
 
 .game-popup h3 {
