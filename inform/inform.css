@@ -73,6 +73,30 @@ nav ul li a.active {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.button_menu {
+  position: fixed; /* Фиксируем кнопку слева */
+  top: 60px; /* Отступ сверху */
+  left: 60px; /* Отступ слева */
+  background-color: #e4331bcd; /* Цвет фона */
+  color: white; /* Цвет текста */
+  border: none; /* Без рамки */
+  padding: 10px 15px; /* Внутренние отступы */
+  border-radius: 5px; /* Закругленные углы */
+  cursor: pointer; /* Курсор в виде указателя */
+  font-size: 16px; /* Размер шрифта */
+  transition: background-color 0.3s; /* Плавный переход цвета */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.button_menu a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: white; /* Цвет текста */
+}
+
+.button_menu:hover {
+  background-color: #0056b3; /* Цвет фона при наведении */
+}
+
 
   .about-section {
     position: relative;
@@ -152,23 +176,29 @@ nav ul li a.active {
     color: #555;
 }
 
-.prev, .next {
-    position:fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-}
 
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
 .prev {
-    left: 60px;
+    left: 10px;
 }
 
 .next {
-    right: 60px;
+    right: 10px;
 }
 
 footer {
